@@ -3,8 +3,6 @@ const cors = require('cors')
 const path = require('path')
 require('dotenv').config({path:'./.env'})
 
-console.log(process.env);
-
 const app = express()
 const http = require('http').createServer(app)
 
