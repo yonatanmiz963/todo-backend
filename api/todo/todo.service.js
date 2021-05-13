@@ -37,16 +37,6 @@ async function add(todo) {
     }
 }
 
-async function getById(todoId) {
-    try {
-        const collection = await dbService.getCollection('todo')
-        const todo = await collection.findOne({ '_id': ObjectId(todoId) })
-        return todo
-    } catch (err) {
-        console.log(`while finding todo ${todoId}`, err)
-        throw err
-    }
-}
 
 async function update(todo) {
     try {
@@ -64,8 +54,7 @@ module.exports = {
     query,
     remove,
     add,
-    update,
-    getById
+    update
 }
 
 
