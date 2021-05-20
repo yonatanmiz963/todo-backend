@@ -13,10 +13,13 @@ const PASS = getEnv('DB_PASSWORD');
 
 const DB_NAME = getEnv('DB_NAME');
 
+const CURR_ENV = getEnv('NODE_ENV')
+
 
 
 module.exports = {
     USERNAME,
     PASS,
-    DB_NAME
+    DB_NAME,
+    CURR_ENV
 }
